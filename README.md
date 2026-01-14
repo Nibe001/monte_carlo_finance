@@ -1,4 +1,4 @@
-<pre>
+
 ```bash
 monte_carlo_finance/
 ├── examples/
@@ -17,4 +17,3 @@ monte_carlo_finance/
     ├── test_gbm.py
     └── test_option_pricing.py
 ```
-</pre>
