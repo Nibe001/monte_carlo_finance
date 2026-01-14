@@ -10,10 +10,11 @@ monte_carlo_finance/
 │   ├── gbm.py
 │   ├── option_pricing.py
 │   └── utils.py
+├── tests/
+├── ├── test_brownian.py
+├── ├── test_gbm.py
+├── └── test_option_pricing.py
 ├── README.md
 ├── requirements.txt
-└── tests/
-    ├── test_brownian.py
-    ├── test_gbm.py
-    └── test_option_pricing.py
+└── .gitignore
 ```
