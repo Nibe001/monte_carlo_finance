@@ -1,19 +1,42 @@
-## Monte Carlo in Finance
+# Monte Carlo in Finance
 
 This small pedagogical project is for similating stochastic processes in finance and pricing europeans options using Monte Carlo method.
 
 The objective is to :
 - Implement simple simulators of brownian motion and geometric brownian motion
-- Use these simulator to approximate the price of europeans options (call and put) via Monte Carlo
+- Use these simulators to approximate the price of european options (call and put) via Monte Carlo
 - Illustrate the convergence of Monte Carlo estimators and the link with Black-Scholes formula
-- Plot trajectories and prices for some exmaples
+- Plot trajectories and prices for some examples
 
 The project is made for fun, and I hope you'll take pleasure to read it too ;).
 
 ---
 
 
-## 
+# 1. Mathematical Framework
+
+## 1.1. Brownian Motion (Wiener Process)
+
+### 1.1.1. Definition
+
+A standard brownian motion $(W_t)_{t\ge 0}$ is a stochastic process that verify the properties :
+
+1) $W_0 = 0$
+2) $(W_t)_{t\ge 0}$ is increment independant, i.e $W_t - W_s$ is independant from the $\sigma$-field $\sigma(W_u, u < s)$ where $s < t$.
+3) $(W_t)_{t\ge 0}$ has gaussian increment i.e $W_t - W_s \sim \mathcal{N}(0, t - s)$ for $0 \leq s < t$.
+
+Remark :
+
+Using that definition, we can directly deduce that $W_t \sim \mathcal{N}(0, t)$ and then $\mathbb{E}(W_t) = 0$ and $\mathbb{V}(W_t) = t$.
+
+### 1.1.2. Theorem
+
+Let's consider a 
+
+- 
+
+# 2. Project Structure
+
 ```bash
 monte_carlo_finance/
 ├── examples/
@@ -33,3 +56,6 @@ monte_carlo_finance/
 ├── requirements.txt
 └── .gitignore
 ```
+
+
+# 3. Installation
