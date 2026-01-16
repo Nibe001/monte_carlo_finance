@@ -78,7 +78,7 @@ $$S_t = S_0 \exp(\left(\mu - \frac12 \sigma^2\right)t + \sigma W_t) \quad \text{
 
 From the previous section, we can deduce some interesting property that we'll verify with the simulations. Here they are :
 - $Y_t = \log S_t \sim \mathcal{N}\left(\log S_0 + (\mu - \frac12 \sigma^2)t, \sigma^2t\right)$ since $W_t \sim \mathcal{N}(0, t)$
-- $\mathbb{E}(S_t) = \mathbb{E}(S_t | \mathcal{F}_0) = S_0 \exp\left((\mu - \frac12 \sigma^2)\right)\mathbb{E}(e^{\sigma \sqrt{t} W_1}) = S_0e^{\mu t}$ because $\mathbb{E}(e^{aX}) = e^{a^2 \over 2}$ when $X \sim \mathcal{N}(0, 1)$. (where $\mathcal{F}_0 = {\emptyset, \Omega}$)
+- $\mathbb{E}(S_t) = \mathbb{E}(S_t | \mathcal{F}_0) = S_0 \exp\left((\mu - \frac12 \sigma^2)\right)\mathbb{E}(e^{\sigma \sqrt{t} W_1}) = S_0e^{\mu t}$ because $\mathbb{E}(e^{aX}) = e^{a^2 \over 2}$ when $X \sim \mathcal{N}(0, 1)$. (where $\mathcal{F}_0 = \{\emptyset, \Omega\}$)
 - Using the same reasoning yield $\mathbb{V}(S_t) = S_0^2 e^{2\mu t}(e^{\sigma^2 t} - 1)$.
 
 To illustrate these results, we will plot the histograms of $\log S_T$ (for some horizon time $T$) and check if the distribution match the gaussian with the same parameters. Also, we'll see if the convergence theorem holds. And at the end, check the impact of the varying of the volatility and the drift on the shape of that distribution.
