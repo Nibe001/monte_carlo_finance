@@ -45,7 +45,7 @@ $\textbf{Theorem 1 :}$
 $$\hat{\mu_t} \xrightarrow[N \to \infty]{\mathbb{P}-a.s} \mathbb{E}(W_t^{(1)}) = 0.$$
 
 - $\textit{Convergence of the estimator}$ :  To get the convergence, we can add and substract the true expectation $\mu_t$ in the square and use the remarkable identity $(a + b)^2 = a^2 + b^2 + 2ab$ in order to get the true variance $\sigma_t$ and some other terms which converge towards 0. Hence, we obtain :
-$$\hat{\sigma_t^2} \xrightarrow[N \to \infty]{} \sigma_t = t.$$
+$$\hat{\sigma_t^2} \xrightarrow[N \to \infty]{} \sigma_t^2 = t.$$
 
 - $\textit{Central Limit Theorem}$ : Now that we have the convergence toward the true expectation and the results on the variance, one would know what's the error we made and the rate of convergence. For this purpose, we use the CLT and get that :
 $$\sqrt{N} \frac{\hat{\mu_t} - \mu_t}{\sigma_t} = \sqrt{N} \frac{\hat{\mu_t}}{\sqrt{t}} \xrightarrow[N \to \infty]{law} \mathcal{N}(0, t).$$
