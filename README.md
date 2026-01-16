@@ -41,11 +41,14 @@ Now, the interest is to check if those estimators are **consistants** and **conv
 For that, we use the following theorems which gives us the convergence and the speed of that convergence.
 
 $\textbf{Theorem 1 :}$
-- $\textit{Law of Large Numbers}$ : For $t\ge 0$ fixed, since $(W_t^{(i)})_{i=1}^N$ are i.i.d random variables, we can apply the LLN and get :
-$$\hat{\mu_t} \xrightarrow[N \to \infty]{} \mathbb{E}(X) = 0 \quad \text{ with } X \sim \mathcal{N}(0, t).$$
+- $\textit{Strong Law of Large Numbers}$ : For $t\ge 0$ fixed, since $(W_t^{(i)})_{i=1}^N$ are i.i.d random variables and $\mathbb{E}(W_t^{(1)}) < \infty$, we can apply the LLN and get :
+$$\hat{\mu_t} \xrightarrow[N \to \infty]{\mathbb{P}-a.s} \mathbb{E}(W_t^{(1)}) = 0.$$
 
-- Convergence of Monte Carlo's Variance estimator :
-$$\hat{\sigma_t^2} \xrightarrow[N \to \infty]{} T.$$
+- $\textit{Convergence of the estimator}$ :  To get the convergence, we can add and substract the true expectation $\mu_t$ in the square and use the remarkable identity $(a + b)^2 = a^2 + b^2 + 2ab$ in order to get the true variance $\sigma_t$ and some other terms which converge towards 0. Hence, we obtain :
+$$\hat{\sigma_t^2} \xrightarrow[N \to \infty]{} \sigma_t = t.$$
+
+- $\textit{Central Limit Theorem}$ : Now that we have the convergence toward the true expectation and the results on the variance, one would know what's the error we made and the rate of convergence. For this purpose, we use the CLT and get that :
+$$\sqrt{N} \frac{\hat{\mu_t} - \mu_t}{\sigma_t} = \sqrt{N} \frac{\hat{\mu_t}}{t} \xrightarrow[N \to \infty]{law} \mathcal{N}(0, t).$$
 
 We'll pay attention to check if experimental results match theoretical ones.
 
