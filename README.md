@@ -32,25 +32,27 @@ Using that definition, we can directly deduce that $W_t \sim \mathcal{N}(0, t)$ 
 ### 1.1.2. Theorem
 
 Let $N \ge 1$ an integer.
-Let's consider a horizon time $T$ and $(t_i:= i\frac{T}{N})$ a partition of the interval $\[0, T\]$.
+Let's consider a family $(W_t^{(i)})_{t\ge 0}$ of i.i.d Wiener Processes where $i \in \{1, \dots, N\}$.
 
-The respective Monte Carlo's estimators of expectation and variance are given by :
-$$
-\hat{\mu} = \frac{1}{N} \sum_0^N W_{t_i}.
-\quad \text{ and }
-\quad 
-\hat{\sigma^2} = \frac{1}{N} \sum_0^N W_{t_i}^2.
-$$
+For each time $t\ge 0$, the respectives Monte Carlo's estimators of expectation and variance are given by :
+$$\hat{\mu_t} = \frac{1}{N} \sum_{i=1}^N W_t^{(i)} \quad \text{ and } \quad \hat{\sigma_t^2} = \frac{1}{N} \sum_{i=1}^N (W_t^{(i)})^2.$$
 
 Now, the interest is to check if those estimators are **consistants** and **convergents**. 
-For that, we use the following theorems with (provided proof) which gives us the convergence and the speed of that convergence.
+For that, we use the following theorems which gives us the convergence and the speed of that convergence.
 
-Theorem 1 :
+$\textbf{Theorem 1 :}$
+- $\emph{Law of Large Numbers}$ : For $t\ge 0$ fixed, since $(W_t^{(i)})_{i=1}^N$ are i.i.d random variables, we can apply the LLN and get :
+$$\hat{\mu_t} \overline{\longrightarrow}{N \to \infty} \mathbb{E}(X) = 0 \quad \text{ with } X \sim \mathcal{N}(0, t).$$
+
 - Convergence of Monte Carlo's Variance estimator :
-$$\frac{1}{N} \sum_0^N W_{t_i}^2 \over{\longrightarrow}{N \rightarrow \infty} T.$$
+$$\hat{\sigma_t^2} \overline{\longrightarrow}{N \to \infty} T.$$
 
-- Law of Large Number :
-$$\frac{1}{N} \sum_0^N W_{t_i} \over{\longrightarrow}{N \rightarrow \infty} T.$$
+We'll pay attention to check if experimental results match theoretical ones.
+
+$\textbf{\emph{Proof (Theorem 1) :}}$
+
+
+
 
 # 2. Project Structure
 
