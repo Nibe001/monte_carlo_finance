@@ -32,7 +32,7 @@ Using that definition, we can directly deduce that $W_t \sim \mathcal{N}(0, t)$ 
 ### 1.1.2. Theorem
 
 Let $N \ge 1$ an integer.
-Let's consider a family $(W_t^{(i)})_{t\ge 0}$ of i.i.d Wiener Processes where $i \in \{1, \dots, N\}$.
+Let's consider a family $(W_t^{(i)})_{t\ge 0}$ of i.i.d Wiener Processes where $i = 1, \dots, N$.
 
 For each time $t\ge 0$, the respectives Monte Carlo's estimators of expectation and variance are given by :
 $$\hat{\mu_t} = \frac{1}{N} \sum_{i=1}^N W_t^{(i)} \quad \text{ and } \quad \hat{\sigma_t^2} = \frac{1}{N} \sum_{i=1}^N (W_t^{(i)})^2.$$
@@ -42,10 +42,10 @@ For that, we use the following theorems which gives us the convergence and the s
 
 $\textbf{Theorem 1 :}$
 - $\textit{Law of Large Numbers}$ : For $t\ge 0$ fixed, since $(W_t^{(i)})_{i=1}^N$ are i.i.d random variables, we can apply the LLN and get :
-$$\hat{\mu_t} \xrightarrow[N \to \infty] \mathbb{E}(X) = 0 \quad \text{ with } X \sim \mathcal{N}(0, t).$$
+$$\hat{\mu_t} \xrightarrow[N \to \infty]{} \mathbb{E}(X) = 0 \quad \text{ with } X \sim \mathcal{N}(0, t).$$
 
 - Convergence of Monte Carlo's Variance estimator :
-$$\hat{\sigma_t^2} \xrightarrow[N \to \infty] T.$$
+$$\hat{\sigma_t^2} \xrightarrow[N \to \infty]{} T.$$
 
 We'll pay attention to check if experimental results match theoretical ones.
 
