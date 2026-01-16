@@ -107,6 +107,7 @@ $$C_0 = e^{-rT}\mathbb{E}^{\mathbb{Q}}[(S_T - K)^{+}]$$
 
 Let $N \ge 1$.
 Then for $N$ simulated i.i.d trajectories $(S^{(i)})\_{i=1}^N$ until the maturity date $T$, we have the following estimator :
+
 $$\hat{C_0} = e^{-rT}\frac{1}{N}\sum_{i=1}^N (S_T^{(i)} - K)^{+}.$$
 
 By the strong law of large number, this estimator converge almost surely to the theoretical price $C_0$ from the previous section.
