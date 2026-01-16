@@ -48,7 +48,7 @@ $$\hat{\mu_t} \xrightarrow[N \to \infty]{\mathbb{P}-a.s} \mathbb{E}(W_t^{(1)}) =
 $$\hat{\sigma_t^2} \xrightarrow[N \to \infty]{} \sigma_t = t.$$
 
 - $\textit{Central Limit Theorem}$ : Now that we have the convergence toward the true expectation and the results on the variance, one would know what's the error we made and the rate of convergence. For this purpose, we use the CLT and get that :
-$$\sqrt{N} \frac{\hat{\mu_t} - \mu_t}{\sigma_t} = \sqrt{N} \frac{\hat{\mu_t}}{t} \xrightarrow[N \to \infty]{law} \mathcal{N}(0, t).$$
+$$\sqrt{N} \frac{\hat{\mu_t} - \mu_t}{\sigma_t} = \sqrt{N} \frac{\hat{\mu_t}}{\sqrt{t}} \xrightarrow[N \to \infty]{law} \mathcal{N}(0, t).$$
 
 We'll pay attention to check if experimental results match theoretical ones.
 
