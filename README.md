@@ -27,7 +27,7 @@ A standard brownian motion $(W_t)_{t\ge 0}$ is a stochastic process that verify 
 
 Remark :
 
-Using that definition, we can directly deduce that $W_t \sim \mathcal{N}(0, t)$ and then $\mu = \mathbb{E}(W_t) = 0$ and $\sigma^2 = \mathbb{V}(W_t) = t$.
+Using that definition, we can directly deduce that $W_t \sim \mathcal{N}(0, t)$ and then $\mu_t = \mathbb{E}(W_t) = 0$ and $\sigma_t^2 = \mathbb{V}(W_t) = t$.
 
 ### 1.1.2. Theorem
 
@@ -41,15 +41,15 @@ Now, the interest is to check if those estimators are **consistants** and **conv
 For that, we use the following theorems which gives us the convergence and the speed of that convergence.
 
 $\textbf{Theorem 1 :}$
-- $\emph{Law of Large Numbers}$ : For $t\ge 0$ fixed, since $(W_t^{(i)})_{i=1}^N$ are i.i.d random variables, we can apply the LLN and get :
-$$\hat{\mu_t} \overline{\longrightarrow}{N \to \infty} \mathbb{E}(X) = 0 \quad \text{ with } X \sim \mathcal{N}(0, t).$$
+- $\textit{Law of Large Numbers}$ : For $t\ge 0$ fixed, since $(W_t^{(i)})_{i=1}^N$ are i.i.d random variables, we can apply the LLN and get :
+$$\hat{\mu_t} \xrightarrow[N \to \infty] \mathbb{E}(X) = 0 \quad \text{ with } X \sim \mathcal{N}(0, t).$$
 
 - Convergence of Monte Carlo's Variance estimator :
-$$\hat{\sigma_t^2} \overline{\longrightarrow}{N \to \infty} T.$$
+$$\hat{\sigma_t^2} \xrightarrow[N \to \infty] T.$$
 
 We'll pay attention to check if experimental results match theoretical ones.
 
-$\textbf{\emph{Proof (Theorem 1) :}}$
+$\textbf{\textit{Proof (Theorem 1) :}}$
 
 
 
