@@ -120,6 +120,7 @@ Using the B.S formula, we can compute the price of an european option given the 
 
 $$C_{BS} = S_0 \Phi(d_1) - Ke^{-rT}\Phi(d_2) \quad \text{where } d_{1,2} = {\ln(\frac{S_0}{K}) + (r ± \frac12 \sigma^2) T \over \sigma \sqrt{T}} \text{ and } \Phi \text{ the CDF of } \mathcal{N}(0, 1).$$
 
+---
 
 # 2. Project Structure
 
@@ -143,5 +144,6 @@ monte_carlo_finance/
 └── .gitignore
 ```
 
+---
 
 # 3. Installation
