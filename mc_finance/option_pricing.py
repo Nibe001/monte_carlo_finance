@@ -51,8 +51,13 @@ def price_european_call_mc(
     3. Compute the average payoff and discount it back to present value.
     4. Return the estimated option price.
     """
-    # TODO: Implement the function to price European call option using Monte Carlo
-    raise NotImplementedError("Function 'price_european_call_mc' is not yet implemented.")
+    
+    paths = gbm_paths(S0, r, sigma, n, m, T, random_state) # mu is set to r for risk-neutral pricing
+    
+    payoffs = np.maximum(paths[:, -1] - K, 0)
+    discounted_payoff = np.exp(-r * T) * np.mean(payoffs)
+    
+    return discounted_payoff
 
 
 def price_european_put_mc(
@@ -73,5 +78,8 @@ def price_european_put_mc(
     where C is the call price, P is the put price, S0 is the initial stock price,
     and r is the risk-free rate.
     """
-    # TODO: Implement the function to price European put option using Monte Carlo
-    raise NotImplementedError("Function 'price_european_put_mc' is not yet implemented.")
+    
+    call_price = price_european_call_mc(S0, K, T, r, sigma, n, m, random_state)
+    put_price = call_price - S0 + K * np.exp(-r * T)
+    
+    return put_price

@@ -50,5 +50,10 @@ def gbm_paths(
     3. Compute the GBM paths using the price S(t) analytic form.
     4. Return the array of simulated GBM paths.
     """
-    # TODO: Implement the function to simulate GBM paths
-    raise NotImplementedError("Function 'gbm_paths' is not yet implemented.")
+    
+    paths = brownian_paths(n, m, T, random_state)
+    
+    time_grid = np.linspace(0, T, n + 1)
+    gbm_paths = S0 * np.exp((mu - 0.5 * sigma**2) * time_grid + sigma * paths)
+    
+    return gbm_paths

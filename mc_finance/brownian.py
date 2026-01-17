@@ -45,5 +45,11 @@ def brownian_paths(
     6. Return the array of simulated paths.
     """
     
-    # TODO: Implement the function to simulate Brownian motion paths
-    raise NotImplementedError("Function 'brownian_paths' is not yet implemented.")
+    rng = get_rng(random_state)
+    paths = np.zeros((m, n + 1))
+    dt = T / n
+    
+    increments = rng.normal(0, np.sqrt(dt), size=(m, n))
+    paths[:, 1:] = np.cumsum(increments, axis=1)
+
+    return paths
